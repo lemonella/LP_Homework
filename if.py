@@ -7,11 +7,11 @@
 
 def compare_strings(s1, s2):
     if (s1 == s2):
-        result = 1
+        result = '1'
     elif (len(s1) > len(s2)):
-        result = 2
+        result = '2'
     elif (s2 == 'learn'):
-        result = 3
+        result = '3'
     else:
         result = ''
     return result
@@ -19,4 +19,4 @@ def compare_strings(s1, s2):
 s1 = input('Введите первое слово: ')
 s2 = input('Введите второе слово: ')
 
-print('Результат: ' + str(compare_strings(s1, s2)))
+print('Результат: ' + compare_strings(s1, s2))

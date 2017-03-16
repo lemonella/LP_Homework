@@ -14,11 +14,16 @@ for name in names_list:
 		break
 
 # Task 2. Now the same with a function
-def find_person(name, names_list):
-	for n in names_list:
-		if n == name:
+def find_person(names_list):
+	name_from_user = input('Введите имя человека, которого ищем: ')
+	for name in names_list:
+		if name == name_from_user:
 			print (name + ' нашелся!')
 			break
+		elif (names_list.index(name) == len(names_list) - 1):
+			print('Не удалось найти такого :(')
+
+find_person(names_list)
 
 # Task 3, 4 
 def ask_user(greeting):

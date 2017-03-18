@@ -27,13 +27,15 @@ find_person(names_list)
 
 # Task 3, 4 
 def ask_user(greeting):
+	try:
+		message = input(greeting + ' ').lower()
 
-	message = input(greeting + ' ').lower()
-
-	if message == 'хорошо':
-		print("Пока!")
-	else:
-		ask_user('И всё-таки, как дела?')
+		if message == 'хорошо':
+			print("Пока!")
+		else:
+			ask_user('И всё-таки, как дела?')
+	except KeyboardInterrupt:
+		print('Вы принудительно закончили беседу. Наш бот вас больше не побеспокоит.')
 
 
 ask_user('Как дела?')

@@ -1,4 +1,6 @@
 import ephem
+import datetime
+date = datetime.datetime.now()
 
 raw_planets_list = ephem._libastro.builtin_planets()
 planets_list = {}
@@ -6,7 +8,9 @@ planets_list = {}
 for i in raw_planets_list:
 	if (i[1] != 'Planet'):
 		continue
-	a = getattr(ephem, i[2])('2016/09/23')
+		
+	# let's create an object for all planets by their names from list
+	a = getattr(ephem, i[2])(date.strftime('%Y/%m/%d'))
 	planets_list[i[2]] = ephem.constellation(a)[1]
 
 def get_sign_by_planet (planet):

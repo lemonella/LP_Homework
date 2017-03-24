@@ -22,5 +22,5 @@ def count_words_in_message (message):
 
 
 if __name__ == '__main__':
-	# print(count_words_in_message(input('Введи фразу: ')))
-	print(count_words_in_message('/wordcount sfhvlskjfhgsl'))
+	print(count_words_in_message(input('Введи фразу: ')))
+	#print(count_words_in_message('/wordcount sfhvlskjfhgsl'))

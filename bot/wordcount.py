@@ -9,7 +9,7 @@ import re
 def count_words_in_message (message):
 	result = -1
 
-	if not message.startswith ('/wordcount'):
+	if not message.startswith('/wordcount'):
 		return result
 
 	bare_phrase = re.findall('\"(.*)\"', message)
